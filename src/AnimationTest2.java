@@ -13,12 +13,12 @@ public class AnimationTest2 {
 	}
 	
 	private static final DisplayMode POSSIBLE_MODES[] = {
-		new DisplayMode(1920, 1080, 32, 0),
-		new DisplayMode(1920, 1080, 24, 0),
-		new DisplayMode(1920, 1080, 16, 0),
-		new DisplayMode(1280, 720, 32, 0),
-		new DisplayMode(1280, 720, 24, 0),
-		new DisplayMode(1280, 720, 16, 0)
+			/*new DisplayMode(2560, 1600, 32, 0),
+			new DisplayMode(2560, 1600, 24, 0),*/
+			new DisplayMode(1680, 1050, 16, 0),
+			new DisplayMode(1680, 1050, 32, 0),
+			new DisplayMode(1440, 900, 24, 0),
+			new DisplayMode(1440, 900, 16, 0)
 	};
 	
 	
@@ -31,7 +31,7 @@ public class AnimationTest2 {
 	
 	public void loadImages() {
 		// 	Load images
-		bgImage 		= loadImage("background.jpg");
+		bgImage 		= loadImage("background.jpg").getScaledInstance(1679, 1049, 0);
 		
 		Image[] animationFrames = {
 				loadImage("animation0/a4_b0_0.png"),
