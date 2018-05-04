@@ -69,7 +69,7 @@ public class SpriteTest2 {
 			
 			// 	Select random velocity
 			sprites[i].setVelocityX((float)Math.random() - 0.5f);
-			sprites[i].setVelocityY((float)Math.random() - 0.5f);
+            sprites[i].setVelocityY((float)Math.random() - 0.5f);
 		}
 	}
 	
@@ -166,6 +166,9 @@ public class SpriteTest2 {
 			else if(s.getY() + s.getHeight() >= screen.getHeight()) {
 				s.setVelocityY(-Math.abs(s.getVelocityY()));
 			}
+			
+			// update sprite's locations
+            s.update(elapsedTime);
 		}
 	}
 	
