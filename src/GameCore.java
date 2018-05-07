@@ -53,10 +53,32 @@ public abstract class GameCore {
 	}
 	
 	
-	public Image loadImage(String fileName) {
+	/*public Image loadImage(String fileName) {
 		URL resource = ImageTest.class.getResource("/images/" + fileName);
 		System.out.println("(*) Loading " + resource);
 		return Toolkit.getDefaultToolkit().getImage(resource);
+	}*/
+	public Image loadImage(String fileName) {
+		fileName 		= "/images/" + fileName;
+		URL resource 	= ImageTest.class.getResource(fileName);
+		
+		
+		try{
+			return Toolkit.getDefaultToolkit().getImage(resource);
+		}
+		
+		catch(Exception e) {
+			System.err.println("(!) ERROR: Failed to load file " + fileName);
+			return null;
+		}
+		
+		finally {
+			if(resource != null) {
+				System.out.println("(*) Loading " + resource);
+			}
+		}
+		
+		
 	}
 	
 	

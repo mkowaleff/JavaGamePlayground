@@ -119,9 +119,13 @@ public class ScreenManager {
 	
 	
 	// 	Returns the window currently used in full-screen mode. Returns null if the device is not in full-screen mode.
-	public Window getFullScreenWindow() {
+	/*public Window getFullScreenWindow() {
 		return device.getFullScreenWindow();
-	}
+	}*/
+	
+	public JFrame getFullScreenWindow() {
+        return (JFrame)device.getFullScreenWindow();
+    }
 	
 	
 	// 	Returns the width of the window currently used in full-screen mode. Returns 0 if the device is not in full-screen mode.
