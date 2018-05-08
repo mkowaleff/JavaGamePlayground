@@ -20,6 +20,7 @@ public class MenuTest extends InputManagerTest implements ActionListener {
 	private JButton pauseButton;
 	private JPanel playButtonSpace;
 	
+	
 	public void init() {
 		super.init();
 		
@@ -28,21 +29,21 @@ public class MenuTest extends InputManagerTest implements ActionListener {
 		NullRepaintManager.install();
 		
 		// create an additional GameAction for "config"
-		configAction = new GameAction("config");
+		configAction 		= new GameAction("config");
 		
 		// create buttons
-		quitButton = createButton("quit", "Quit");
-		playButton = createButton("play", "Continue");
-		pauseButton = createButton("pause", "Pause");
-		configButton = createButton("config", "Change Settings");
+		quitButton 			= createButton("quit", "Quit");
+		playButton 			= createButton("play", "Continue");
+		pauseButton 		= createButton("pause", "Pause");
+		configButton 		= createButton("config", "Change Settings");
 		
 		// create the space where the play/pause buttons go
-		playButtonSpace = new JPanel();
+		playButtonSpace 		= new JPanel();
 		playButtonSpace.setOpaque(false);
 		playButtonSpace.add(pauseButton);
 		
-		JFrame frame = super.screen.getFullScreenWindow();
-		Container contentPane = frame.getContentPane();
+		JFrame frame 			= super.screen.getFullScreenWindow();
+		Container contentPane 	= frame.getContentPane();
 		
 		// make sure the content pane is transparent
 		if (contentPane instanceof JComponent) {

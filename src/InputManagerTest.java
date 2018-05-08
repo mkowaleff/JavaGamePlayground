@@ -146,19 +146,70 @@ public class InputManagerTest extends GameCore {
 	// Load images and creates the Player sprite.
 	private void createSprite() {
 		// load images
-		bgImage = loadImage("../images/background.jpg").getScaledInstance(1680, 1050, 0);
-		Image player1 = loadImage("../images/player1.png");
+		//bgImage = loadImage("../images/background.jpg").getScaledInstance(1680, 1050, 0);
+		bgImage = loadImage("../images/desert-background.png").getScaledInstance(1680, 1050, 0);
+		/*Image player1 = loadImage("../images/player1.png");
 		Image player2 = loadImage("../images/player2.png");
-		Image player3 = loadImage("../images/player3.png");
+		Image player3 = loadImage("../images/player3.png");*/
 		
+		Image mage1 = loadImage("../images/mage/41807_01.png");
+		Image mage2 = loadImage("../images/mage/41807_02.png");
+		Image mage3 = loadImage("../images/mage/41807_03.png");
+		Image mage4 = loadImage("../images/mage/41807_04.png");
+		Image mage5 = loadImage("../images/mage/41807_05.png");
+		Image mage6 = loadImage("../images/mage/41807_06.png");
+		Image mage7 = loadImage("../images/mage/41807_07.png");
+		
+		Image mag1 = loadImage("../images/mage/42185_05.png");
+		Image mag2 = loadImage("../images/mage/42185_06.png");
+		Image mag3 = loadImage("../images/mage/42185_07.png");
+		Image mag4 = loadImage("../images/mage/42185_08.png");
+		Image mag5 = loadImage("../images/mage/42185_09.png");
+		Image[] mag = {
+				loadImage("../images/mage/42185_05.png"),
+				loadImage("../images/mage/42185_06.png"),
+				loadImage("../images/mage/42185_07.png"),
+				loadImage("../images/mage/42185_08.png"),
+				loadImage("../images/mage/42185_09.png"),
+				loadImage("../images/mage/42185_09.png"),
+				loadImage("../images/mage/42185_09.png"),
+				loadImage("../images/mage/42185_08.png"),
+				loadImage("../images/mage/42185_07.png"),
+				loadImage("../images/mage/42185_06.png"),
+				};
+		
+		
+		Image[] titan = {
+				loadImage("../images/titan/41798_01.png"),
+				loadImage("../images/titan/41798_15.png"),
+				loadImage("../images/titan/41798_16.png"),
+				loadImage("../images/titan/41798_17.png"),
+				loadImage("../images/titan/41798_18.png"),
+				loadImage("../images/titan/41798_19.png"),
+				loadImage("../images/titan/41798_20.png"),
+				loadImage("../images/titan/41798_21.png")
+		};
 		// create animation
 		Animation anim = new Animation();
-		anim.addFrame(player1, 250);
+		/*anim.addFrame(player1, 250);
 		anim.addFrame(player2, 150);
 		anim.addFrame(player1, 150);
 		anim.addFrame(player2, 150);
 		anim.addFrame(player3, 200);
-		anim.addFrame(player2, 150);
+		anim.addFrame(player2, 150);*/
+		
+		for(int i = 0; i < 5; i++) {
+			anim.addFrame(titan[i], 100);
+		}
+		
+		/*anim.addFrame(mage1, 250);
+		
+		anim.addFrame(mage2, 250);
+		anim.addFrame(mage3, 250);
+		anim.addFrame(mage4, 250);
+		anim.addFrame(mage5, 250);
+		anim.addFrame(mage6, 250);
+		anim.addFrame(mage7, 250);*/
 		
 		player = new Player(anim);
 		player.setFloorY(screen.getHeight() - 300);
